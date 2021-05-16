@@ -10,7 +10,7 @@ echo "local version is ${version}"
 
 image_name="npm"
 dockerfile="${base_dir}/alpine.dockerfile"
-echo "build ${image_name}:${local_version}" \
+echo "build ${image_name}:${version}" \
 && docker build --pull -t ${image_group}/${image_name}:${version} -f ${dockerfile} ${base_dir} \
 && docker push ${image_group}/${image_name}:${version} \
 && echo "build ${image_name} finish"
